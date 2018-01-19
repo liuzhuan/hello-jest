@@ -24,6 +24,14 @@ test('object assignment', () => {
 })
 ```
 
+`toEqual` 会递归的检测对象或数组的每个字段。
+
+你还可以检测匹配器的反义词：
+
+```js
+test('adding positive numbers is not zero')
+```
+
 ## REF
 
 - [Using Matchers - Jest][matchers]

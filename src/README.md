@@ -1,5 +1,9 @@
 # Jest 简明教程
 
+<span style="background: #99424f;display: inline-block;line-height:1;">
+  <img src="https://facebook.github.io/jest/img/jest.svg" style="width:50px;">
+</span>
+
 > Jest: Delightful JavaScript Testing
 
 Jest 是 Facebook 出品的测试框架。优势在于设置简单，快速反馈，快照测试，零配置测试框架。
