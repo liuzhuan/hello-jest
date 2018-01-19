@@ -1,4 +1,4 @@
-# Facebook Jest
+# Jest 简明教程
 
 > Jest: Delightful JavaScript Testing
 

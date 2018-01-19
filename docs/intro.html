@@ -57,6 +57,8 @@
     <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
 
     
+    <link rel="next" href="using-matchers.html" />
+    
     
     <link rel="prev" href="./" />
     
@@ -85,6 +87,8 @@
 
     
         
+        <li class="header">入门</li>
+        
         
     
         <li class="chapter " data-level="1.1" data-path="./">
@@ -106,6 +110,53 @@
             
                     
                     开始使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="using-matchers.html">
+            
+                <a href="using-matchers.html">
+            
+                    
+                    使用匹配器
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">指南</li>
+        
+        
+    
+
+    
+        
+        <li class="header">框架指南</li>
+        
+        
+    
+
+    
+        
+        <li class="header">API 参考</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="cli.html">
+            
+                <a href="cli.html">
+            
+                    
+                    命令行选项
             
                 </a>
             
@@ -185,12 +236,59 @@ test(<span class="hljs-string">&apos;adds 1 + 2 to equal 3&apos;</span>, () =&gt
 <p>&#x8FD0;&#x884C;&#x6D4B;&#x8BD5;&#x7528;&#x4F8B;&#xFF1A;</p>
 <pre><code>npm test
 </code></pre><p><strong>&#x6211;&#x4EEC;&#x521A;&#x521A;&#x6210;&#x529F;&#x6267;&#x884C;&#x4E86;&#x7B2C;&#x4E00;&#x4E2A;&#x6D4B;&#x8BD5;&#x7528;&#x4F8B;&#xFF01;</strong></p>
-<p>&#x4E0A;&#x9762;&#x6D4B;&#x8BD5;&#x7528;&#x4F8B;&#x7528;&#x5230;&#x4E86; <code>expect</code> &#x548C; <code>toBe</code> &#x6D4B;&#x8BD5;&#x4E24;&#x4E2A;&#x6570;&#x503C;&#x662F;&#x5426;&#x76F8;&#x7B49;&#x3002;</p>
+<p>&#x4E0A;&#x9762;&#x6D4B;&#x8BD5;&#x7528;&#x4F8B;&#x7528;&#x5230;&#x4E86; <code>expect</code> &#x548C; <code>toBe</code> &#x6D4B;&#x8BD5;&#x4E24;&#x4E2A;&#x6570;&#x503C;&#x662F;&#x5426;&#x76F8;&#x7B49;&#x3002;&#x60F3;&#x4E86;&#x89E3;&#x66F4;&#x591A;&#x5339;&#x914D;&#x529F;&#x80FD;&#xFF0C;&#x53EF;&#x67E5;&#x770B;<a href="using-matchers.html">&#x4F7F;&#x7528;&#x5339;&#x914D;&#x5668;</a>&#x3002;</p>
+<h2 id="&#x4ECE;&#x547D;&#x4EE4;&#x884C;&#x6267;&#x884C;">&#x4ECE;&#x547D;&#x4EE4;&#x884C;&#x6267;&#x884C;</h2>
+<p>&#x53EF;&#x4ECE;&#x547D;&#x4EE4;&#x884C;&#x76F4;&#x63A5;&#x8FD0;&#x884C; Jest&#xFF08;&#x82E5;&#x5168;&#x5C40;&#x5B89;&#x88C5; Jest&#xFF0C;&#x6BD4;&#x5982; <code>npm install -g jest</code>&#xFF09;&#xFF0C;&#x53EF;&#x4EE5;&#x5E26;&#x4E00;&#x4E9B;&#x53C2;&#x6570;&#x3002;</p>
+<p>&#x6BD4;&#x5982;&#xFF0C;&#x5982;&#x4E0B;&#x547D;&#x4EE4;&#x5BF9;&#x5339;&#x914D; <code>my-test</code> &#x7684;&#x6587;&#x4EF6;&#x6267;&#x884C;&#x6D4B;&#x8BD5;&#x547D;&#x4EE4;&#xFF0C;&#x4F7F;&#x7528; <code>config.json</code> &#x4F5C;&#x4E3A;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#xFF0C;&#x8FD0;&#x884C;&#x7ED3;&#x675F;&#x540E;&#x4F7F;&#x7528;&#x539F;&#x751F;&#x7CFB;&#x7EDF;&#x901A;&#x77E5;&#x63D0;&#x9192;&#xFF1A;</p>
+<pre><code class="lang-sh">jest my-test --notify --config=config.json
+</code></pre>
+<p>&#x5982;&#x679C;&#x60F3;&#x4E86;&#x89E3;&#x6267;&#x884C;&#x547D;&#x4EE4;&#x884C;&#x7684;&#x66F4;&#x591A;&#x5185;&#x5BB9;&#xFF0C;&#x53EF;&#x4EE5;&#x53C2;&#x8003; <a href="cli.html">Jest &#x547D;&#x4EE4;&#x884C;&#x9009;&#x9879;</a>&#x3002;</p>
+<h2 id="&#x66F4;&#x591A;&#x914D;&#x7F6E;">&#x66F4;&#x591A;&#x914D;&#x7F6E;</h2>
+<h3 id="&#x4F7F;&#x7528;-babel">&#x4F7F;&#x7528; Babel</h3>
+<p>&#x4F7F;&#x7528; Babel &#x9700;&#x5B89;&#x88C5; <code>babel-jest</code> &#x548C; <code>regenerator-runtime</code>&#xFF1A;</p>
+<pre><code class="lang-sh">npm install --save-dev babel-jest babel-core regenerator-runtime
+</code></pre>
+<blockquote>
+<p><a href="http://facebook.github.io/regenerator/" target="_blank">regenerator</a> &#x662F; Facebook &#x51FA;&#x54C1;&#x7684;&#x5DE5;&#x5177;&#xFF0C;&#x53EF;&#x4EE5;&#x628A; ES6 &#x751F;&#x6210;&#x5668;&#x8BED;&#x6CD5;&#x8F6C;&#x6362;&#x4E3A;&#x9AD8;&#x6548;&#x7684; ES5 &#x8BED;&#x6CD5;&#x3002;</p>
+<p>&#x26A0;&#xFE0F; &#x6CE8;&#x610F;&#xFF1A;&#x82E5; babel &#x7248;&#x672C;&#x4E3A; 7&#xFF0C;&#x4F60;&#x9700;&#x8981;&#x4F7F;&#x7528;&#x5982;&#x4E0B;&#x547D;&#x4EE4;&#x5B89;&#x88C5; jest&#xFF1A;</p>
+</blockquote>
+<pre><code class="lang-sh">npm install --save-dev babel-jest <span class="hljs-string">&apos;babel-core@^7.0.0-0&apos;</span> @babel/core regenerator-runtime
+</code></pre>
+<p>&#x5982;&#x679C;&#x4F7F;&#x7528; npm 3 &#x6216; npm 4 &#x6216; Yarn&#xFF0C;&#x5219;&#x65E0;&#x987B;&#x663E;&#x5F0F;&#x5B89;&#x88C5; <code>regenerator-runtime</code>&#x3002;</p>
+<p>&#x5728;&#x6839;&#x76EE;&#x5F55;&#x589E;&#x52A0; <code>.babelrc</code>&#x3002;&#x5982;&#x679C;&#x4F60;&#x4F7F;&#x7528; ES6 &#x548C; React.js&#xFF0C;&#x5219;&#x9700;&#x8981;&#x589E;&#x52A0; <code>babel-preset-env</code> &#x548C; <code>babel-preset-react</code> &#x9884;&#x8BBE;&#x503C;&#xFF1A;</p>
+<pre><code class="lang-json">{
+  <span class="hljs-string">&quot;presets&quot;</span>: [<span class="hljs-string">&quot;env&quot;</span>, <span class="hljs-string">&quot;react&quot;</span>]
+}
+</code></pre>
+<p>&#x73B0;&#x5728;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x6240;&#x6709;&#x7684; ES6 &#x7279;&#x6027;&#x548C; React &#x76F8;&#x5173;&#x7279;&#x6027;&#x4E86;&#x3002;</p>
+<p>&#x26A0;&#xFE0F; &#x6CE8;&#x610F;&#xFF1A;&#x5982;&#x679C;&#x4F7F;&#x7528;&#x590D;&#x6742; Babel &#x914D;&#x7F6E;&#xFF0C;&#x6216; Bebel &#x7684; <code>env</code> &#x9009;&#x9879;&#xFF0C;&#x8981;&#x8BB0;&#x5F97; Jest &#x4F1A;&#x81EA;&#x52A8;&#x5C06; <code>NODE_ENV</code> &#x8BBE;&#x7F6E;&#x4E3A; <code>test</code>&#x3002;&#x5B83;&#x4E0E; Babel &#x4E0D;&#x540C;&#xFF0C;&#x5F53; <code>NODE_ENV</code> &#x672A;&#x5B9A;&#x4E49;&#x65F6;&#xFF0C;&#x9ED8;&#x8BA4;&#x4F7F;&#x7528; <code>development</code> &#x9009;&#x9879;&#x3002;</p>
+<p>&#x26A0;&#xFE0F; &#x6CE8;&#x610F;&#xFF1A;&#x5982;&#x679C;&#x4F60;&#x4F7F;&#x7528;&#x9009;&#x9879; <code>{ &quot;modules&quot;: false }</code> &#x5173;&#x95ED;&#x4E86; ES6 &#x6A21;&#x5757;&#x8F6C;&#x8BD1;&#xFF0C;&#x9700;&#x8981;&#x5728;&#x6D4B;&#x8BD5;&#x73AF;&#x5883;&#x4E2D;&#x91CD;&#x65B0;&#x6253;&#x5F00;&#x3002;</p>
+<pre><code class="lang-json">{
+  <span class="hljs-string">&quot;presets&quot;</span>: [[<span class="hljs-string">&quot;env&quot;</span>, { <span class="hljs-string">&quot;modules&quot;</span>: <span class="hljs-literal">false</span> }], <span class="hljs-string">&quot;react&quot;</span>],
+  <span class="hljs-string">&quot;env&quot;</span>: {
+    <span class="hljs-string">&quot;test&quot;</span>: {
+      <span class="hljs-string">&quot;presets&quot;</span>: [[<span class="hljs-string">&quot;env&quot;</span>], <span class="hljs-string">&quot;react&quot;</span>]
+    }
+  }
+}
+</code></pre>
+<p>&#x6CE8;&#x610F;&#xFF1A;&#x5F53;&#x5B89;&#x88C5; Jest &#x65F6;&#xFF0C;<code>babel-jest</code> &#x4F1A;&#x88AB;&#x81EA;&#x52A8;&#x5B89;&#x88C5;&#xFF0C;&#x5E76;&#x4E14;&#x5982;&#x679C;&#x5B58;&#x5728; babel &#x914D;&#x7F6E;&#x6587;&#x4EF6;&#xFF0C;&#x8F6C;&#x8BD1;&#x4F1A;&#x81EA;&#x52A8;&#x6267;&#x884C;&#x3002;&#x5982;&#x679C;&#x4E0D;&#x60F3;&#x8981;&#x8FD9;&#x4E2A;&#x884C;&#x4E3A;&#xFF0C;&#x53EF;&#x4EE5;&#x660E;&#x786E;&#x7684;&#x91CD;&#x7F6E; <code>transform</code> &#x914D;&#x7F6E;&#x9009;&#x9879;&#xFF1A;</p>
+<pre><code class="lang-json"><span class="hljs-comment">// package.json</span>
+{
+  <span class="hljs-string">&quot;jest&quot;</span>: {
+    <span class="hljs-string">&quot;transform&quot;</span>: {}
+  }
+}
+</code></pre>
+<h3 id="&#x4F7F;&#x7528;-webpack">&#x4F7F;&#x7528; webpack</h3>
+<p>Jest &#x53EF;&#x4EE5;&#x5728;&#x4F7F;&#x7528; webpack &#x6784;&#x5EFA;&#x7684;&#x9879;&#x76EE;&#x4E2D;&#x4F7F;&#x7528;&#xFF0C;webpack &#x914D;&#x7F6E;&#x8F83;&#x590D;&#x6742;&#xFF0C;&#x5177;&#x4F53;&#x53EF;&#x53C2;&#x8003; <a href="webpack.md">webpack &#x6307;&#x5357;</a>&#x3002;</p>
+<h3 id="typescript">TypeScript</h3>
+<p>&#x6D4B;&#x8BD5; TypeScript &#x53EF;&#x4EE5;&#x4F7F;&#x7528; <a href="https://facebook.github.io/jest/" target="_blank">ts-jest</a>&#x3002;</p>
 <h2 id="ref">REF</h2>
 <ul>
 <li><a href="https://facebook.github.io/jest/" target="_blank">Jest - Delightful JavaScript Testing</a></li>
 <li><a href="https://facebook.github.io/jest/docs/en/getting-started.html" target="_blank">Getting Started - Jest</a></li>
-<li><a href="https://facebook.github.io/jest/docs/en/using-matchers.html" target="_blank">Using Matchers - Jest</a></li>
+<li><a href="using-matchers.html">Using Matchers - Jest</a></li>
 </ul>
 
                                 
@@ -219,10 +317,14 @@ test(<span class="hljs-string">&apos;adds 1 + 2 to equal 3&apos;</span>, () =&gt
 
             
                 
-                <a href="./" class="navigation navigation-prev navigation-unique" aria-label="Previous page: Introduction">
+                <a href="./" class="navigation navigation-prev " aria-label="Previous page: Introduction">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
+                
+                <a href="using-matchers.html" class="navigation navigation-next " aria-label="Next page: 使用匹配器">
+                    <i class="fa fa-angle-right"></i>
+                </a>
                 
             
         
@@ -231,7 +333,7 @@ test(<span class="hljs-string">&apos;adds 1 + 2 to equal 3&apos;</span>, () =&gt
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"开始使用","level":"1.2","depth":1,"previous":{"title":"Introduction","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"root":"./src","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"gitbook":"*"},"file":{"path":"intro.md","mtime":"2018-01-19T10:12:06.496Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-01-19T10:13:39.120Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"开始使用","level":"1.2","depth":1,"next":{"title":"使用匹配器","level":"1.3","depth":1,"path":"using-matchers.md","ref":"./using-matchers.md","articles":[]},"previous":{"title":"Introduction","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"root":"./src","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"gitbook":"*"},"file":{"path":"intro.md","mtime":"2018-01-19T11:12:53.091Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-01-19T11:25:42.545Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
