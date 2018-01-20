@@ -153,9 +153,14 @@ test('compiling android goes as expected', () => {
 })
 ```
 
+本小节内容只是开胃菜，若要了解全部匹配器，请查看[参考文档][expect]。
+
+一旦掌握了匹配器，下一步就是学习如何使用 Jest 测试异步代码。
+
 ## REF
 
 - [Using Matchers - Jest][matchers]
 
 [matchers]: https://facebook.github.io/jest/docs/en/using-matchers.html
 [is]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/is
+[expect]: ./expect.md
