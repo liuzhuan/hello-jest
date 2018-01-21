@@ -97,6 +97,20 @@ console.log(result) // => 11
 console.log(filterTestFn.mock.calls) // => [[11], [12]]
 ```
 
+## 模拟实现
+
+有些场景需要的更多，不仅仅是返回值，而且需要模拟完整的函数实现。这可以通过 mock 函数的 `jest.fn` 或 `mockImplementationOnce` 实现。
+
+```js
+const myMockFn = jest.fn(cb => cb(null, true))
+
+myMockFn((err, val) => console.log(val))
+
+myMockFn((err, val) => console.log(val))
+```
+
+TO BE CONTINUE...
+
 ## REF
 
 - [Mock Functions - Jest][docs]
