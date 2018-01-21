@@ -50,11 +50,57 @@ console.log(myMock.mock.instances)
 这些 mock 成员在测试中很有用，可以确保这些函数如何调用，或者实例化：
 
 ```js
+// 这个函数只被调用一次
+expect(someMockFunction.mock.calls.length).toBe(1)
 
+// 第一次调用的第一个参数是 'first arg'
+expect(someMockFunction.mock.calls[0][0]).toBe('first arg')
+
+// 第一次调用的第二个实参是 'second arg'
+expect(someMockFunction.mock.calls[0][1]).toBe('second arg')
+
+// 函数被实例化两次
+expect(someMockFunction.mock.instances.length).toBe(2)
+
+// 第一个实例的 name 属性是 test
+expect(someMockFunction.mock.instances[0].name).toEqual('test')
+```
+
+> 貌似 `mock.calls` 和 `mock.instances` 的调用次数（`.length`）一样？
+
+## 模拟返回数值
+
+模拟函数还可以用来向代码注入测试数值：
+
+```js
+const myMock = jest.fn()
+console.log(myMock())
+
+myMock
+  .mockReturnValueOnce(10)
+  .mockReturnValueOnce('x')
+  .mockReturnValue(true)
+
+console.log(myMock(), myMock(), myMock(), myMock())
+```
+
+Mock 函数在 [CPS][cps] 风格代码中十分有效。这种风格的代码可以避免复杂的桩数据，用来复现它们代表的组件行为。而是直接注入数值。
+
+```js
+const filterTestFn = jest.fn()
+
+filterTestFn.mockReturnValueOnce(true).mockReturnValueOnce(false)
+
+const result = [11, 12].filter(filterTestFn)
+
+console.log(result) // => 11
+console.log(filterTestFn.mock.calls) // => [[11], [12]]
 ```
 
 ## REF
 
 - [Mock Functions - Jest][docs]
+- [What is continuation-passing style in functional programming? - quora][cps]
 
 [docs]: https://facebook.github.io/jest/docs/en/mock-functions.html
+[cps]: https://www.quora.com/What-is-continuation-passing-style-in-functional-programming#
