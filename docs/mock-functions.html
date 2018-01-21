@@ -1,0 +1,433 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>模拟数据 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="expect.html" />
+    
+    
+    <link rel="prev" href="setup-teardown.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        <li class="header">入门</li>
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="intro.html">
+            
+                <a href="intro.html">
+            
+                    
+                    开始使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="using-matchers.html">
+            
+                <a href="using-matchers.html">
+            
+                    
+                    使用匹配器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="asynchronous.html">
+            
+                <a href="asynchronous.html">
+            
+                    
+                    测试异步代码
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="setup-teardown.html">
+            
+                <a href="setup-teardown.html">
+            
+                    
+                    准备和扫尾
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.6" data-path="mock-functions.html">
+            
+                <a href="mock-functions.html">
+            
+                    
+                    模拟数据
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">指南</li>
+        
+        
+    
+
+    
+        
+        <li class="header">框架指南</li>
+        
+        
+    
+
+    
+        
+        <li class="header">API 参考</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="expect.html">
+            
+                <a href="expect.html">
+            
+                    
+                    Expect
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="cli.html">
+            
+                <a href="cli.html">
+            
+                    
+                    命令行选项
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >模拟数据</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x6A21;&#x62DF;&#x529F;&#x80FD;">&#x6A21;&#x62DF;&#x529F;&#x80FD;</h1>
+<p>Mock &#x51FD;&#x6570;&#x8BA9;&#x4EE3;&#x7801;&#x95F4;&#x7684;&#x8054;&#x7CFB;&#x6613;&#x4E8E;&#x6D4B;&#x8BD5;&#xFF0C;&#x65E0;&#x9700;&#x771F;&#x6B63;&#x5B9E;&#x73B0;&#x51FD;&#x6570;&#xFF0C;&#x6355;&#x83B7;&#x51FD;&#x6570;&#x8C03;&#x7528;&#x4EE5;&#x53CA;&#x4F20;&#x9012;&#x7684;&#x5B9E;&#x53C2;&#xFF0C;&#x6355;&#x83B7;&#x6784;&#x9020;&#x51FD;&#x6570;&#x751F;&#x6210;&#x7684;&#x5B9E;&#x4F8B;&#xFF0C;&#x5141;&#x8BB8;&#x8FD4;&#x56DE;&#x503C;&#x7684;&#x6D4B;&#x8BD5;&#x65F6;&#x95F4;&#x914D;&#x7F6E;&#x3002;</p>
+<p>&#x6709;&#x4E24;&#x79CD;&#x6A21;&#x62DF;&#x6570;&#x636E;&#x7684;&#x65B9;&#x5F0F;&#xFF1A;&#x521B;&#x5EFA;&#x6A21;&#x62DF;&#x51FD;&#x6570;&#xFF0C;&#x5728;&#x6D4B;&#x8BD5;&#x4EE3;&#x7801;&#x4E2D;&#x4F7F;&#x7528;&#xFF0C;&#x6216;&#x8005;&#x7F16;&#x5199;&#x624B;&#x5DE5;&#x6A21;&#x62DF;&#x6570;&#x636E;&#xFF0C;&#x8986;&#x76D6;&#x6A21;&#x5757;&#x4F9D;&#x8D56;&#x3002;</p>
+<h2 id="&#x4F7F;&#x7528;&#x6A21;&#x62DF;&#x51FD;&#x6570;">&#x4F7F;&#x7528;&#x6A21;&#x62DF;&#x51FD;&#x6570;</h2>
+<p>&#x5047;&#x5982;&#x6211;&#x4EEC;&#x8981;&#x6D4B;&#x8BD5; <code>forEach</code> &#x51FD;&#x6570;&#xFF0C;&#x5F85;&#x6D4B;&#x4EE3;&#x7801;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">forEach</span>(<span class="hljs-params">items, callback</span>) </span>{
+  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> index = <span class="hljs-number">0</span>; index &lt; items.length; index++) {
+    callback(items[index])
+  }
+}
+</code></pre>
+<p>&#x4E3A;&#x4E86;&#x6D4B;&#x8BD5;&#x8BE5;&#x51FD;&#x6570;&#xFF0C;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x4E00;&#x4E2A;&#x6A21;&#x62DF;&#x51FD;&#x6570;&#xFF0C;&#x5E76;&#x9700;&#x8981;&#x68C0;&#x6D4B;&#x68C0;&#x6D4B;&#x6A21;&#x62DF;&#x6570;&#x636E;&#x7684;&#x72B6;&#x6001;&#xFF0C;&#x4EE5;&#x4FBF;&#x786E;&#x4FDD;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#x6309;&#x671F;&#x671B;&#x7ED3;&#x679C;&#x6267;&#x884C;&#xFF1A;</p>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> mockCallback = jest.fn()
+forEach([<span class="hljs-number">0</span>, <span class="hljs-number">1</span>], mockCallback)
+
+<span class="hljs-comment">// &#x6A21;&#x62DF;&#x51FD;&#x6570;&#x88AB;&#x8C03;&#x7528;&#x4E24;&#x6B21;</span>
+expect(mockCallback.mock.calls.length).toBe(<span class="hljs-number">2</span>)
+
+<span class="hljs-comment">// &#x7B2C;&#x4E00;&#x6B21;&#x8C03;&#x7528;&#x7684;&#x7B2C;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#x662F; 0</span>
+expect(mockCallback.mock.calls[<span class="hljs-number">0</span>][<span class="hljs-number">0</span>]).toBe(<span class="hljs-number">0</span>)
+
+<span class="hljs-comment">// &#x7B2C;&#x4E8C;&#x6B21;&#x8C03;&#x7528;&#x7684;&#x7B2C;&#x4E00;&#x4E2A;&#x5B9E;&#x53C2;&#x662F; 1</span>
+expect(mockCallback.mock.calls[<span class="hljs-number">1</span>][<span class="hljs-number">0</span>]).toBe(<span class="hljs-number">1</span>)
+</code></pre>
+<h2 id="mock-&#x5C5E;&#x6027;"><code>.mock</code> &#x5C5E;&#x6027;</h2>
+<p>&#x6240;&#x6709;&#x7684; mock &#x51FD;&#x6570;&#x90FD;&#x6709;&#x4E00;&#x4E2A;&#x7279;&#x6B8A;&#x7684; <code>.mock</code> &#x5C5E;&#x6027;&#xFF0C;&#x5B83;&#x4FDD;&#x5B58;&#x7740;&#x51FD;&#x6570;&#x6267;&#x884C;&#x7684;&#x72B6;&#x6001;&#x6570;&#x636E;&#x3002;<code>.mock</code> &#x5C5E;&#x6027;&#x4E5F;&#x4FDD;&#x5B58;&#x7740;&#x6BCF;&#x6B21;&#x8C03;&#x7528;&#x7684; <code>this</code> &#x6307;&#x5411;&#x7684;&#x5BF9;&#x8C61;&#xFF0C;&#x56E0;&#x6B64;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x63A2;&#x67E5;&#x5B83;&#xFF1A;</p>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> myMock = jest.fn()
+
+<span class="hljs-keyword">const</span> a = <span class="hljs-keyword">new</span> myMock()
+<span class="hljs-keyword">const</span> b = {}
+<span class="hljs-keyword">const</span> bound = myMock.bind(b)
+bound()
+
+<span class="hljs-built_in">console</span>.log(myMock.mock.instances)
+</code></pre>
+<p>&#x8FD9;&#x4E9B; mock &#x6210;&#x5458;&#x5728;&#x6D4B;&#x8BD5;&#x4E2D;&#x5F88;&#x6709;&#x7528;&#xFF0C;&#x53EF;&#x4EE5;&#x786E;&#x4FDD;&#x8FD9;&#x4E9B;&#x51FD;&#x6570;&#x5982;&#x4F55;&#x8C03;&#x7528;&#xFF0C;&#x6216;&#x8005;&#x5B9E;&#x4F8B;&#x5316;&#xFF1A;</p>
+<pre><code class="lang-js"><span class="hljs-comment">// &#x8FD9;&#x4E2A;&#x51FD;&#x6570;&#x53EA;&#x88AB;&#x8C03;&#x7528;&#x4E00;&#x6B21;</span>
+expect(someMockFunction.mock.calls.length).toBe(<span class="hljs-number">1</span>)
+
+<span class="hljs-comment">// &#x7B2C;&#x4E00;&#x6B21;&#x8C03;&#x7528;&#x7684;&#x7B2C;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#x662F; &apos;first arg&apos;</span>
+expect(someMockFunction.mock.calls[<span class="hljs-number">0</span>][<span class="hljs-number">0</span>]).toBe(<span class="hljs-string">&apos;first arg&apos;</span>)
+
+<span class="hljs-comment">// &#x7B2C;&#x4E00;&#x6B21;&#x8C03;&#x7528;&#x7684;&#x7B2C;&#x4E8C;&#x4E2A;&#x5B9E;&#x53C2;&#x662F; &apos;second arg&apos;</span>
+expect(someMockFunction.mock.calls[<span class="hljs-number">0</span>][<span class="hljs-number">1</span>]).toBe(<span class="hljs-string">&apos;second arg&apos;</span>)
+
+<span class="hljs-comment">// &#x51FD;&#x6570;&#x88AB;&#x5B9E;&#x4F8B;&#x5316;&#x4E24;&#x6B21;</span>
+expect(someMockFunction.mock.instances.length).toBe(<span class="hljs-number">2</span>)
+
+<span class="hljs-comment">// &#x7B2C;&#x4E00;&#x4E2A;&#x5B9E;&#x4F8B;&#x7684; name &#x5C5E;&#x6027;&#x662F; test</span>
+expect(someMockFunction.mock.instances[<span class="hljs-number">0</span>].name).toEqual(<span class="hljs-string">&apos;test&apos;</span>)
+</code></pre>
+<blockquote>
+<p>&#x8C8C;&#x4F3C; <code>mock.calls</code> &#x548C; <code>mock.instances</code> &#x7684;&#x8C03;&#x7528;&#x6B21;&#x6570;&#xFF08;<code>.length</code>&#xFF09;&#x4E00;&#x6837;&#xFF1F;</p>
+</blockquote>
+<h2 id="&#x6A21;&#x62DF;&#x8FD4;&#x56DE;&#x6570;&#x503C;">&#x6A21;&#x62DF;&#x8FD4;&#x56DE;&#x6570;&#x503C;</h2>
+<p>&#x6A21;&#x62DF;&#x51FD;&#x6570;&#x8FD8;&#x53EF;&#x4EE5;&#x7528;&#x6765;&#x5411;&#x4EE3;&#x7801;&#x6CE8;&#x5165;&#x6D4B;&#x8BD5;&#x6570;&#x503C;&#xFF1A;</p>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> myMock = jest.fn()
+<span class="hljs-built_in">console</span>.log(myMock())
+
+myMock
+  .mockReturnValueOnce(<span class="hljs-number">10</span>)
+  .mockReturnValueOnce(<span class="hljs-string">&apos;x&apos;</span>)
+  .mockReturnValue(<span class="hljs-literal">true</span>)
+
+<span class="hljs-built_in">console</span>.log(myMock(), myMock(), myMock(), myMock())
+</code></pre>
+<p>Mock &#x51FD;&#x6570;&#x5728; <a href="https://www.quora.com/What-is-continuation-passing-style-in-functional-programming#" target="_blank">CPS</a> &#x98CE;&#x683C;&#x4EE3;&#x7801;&#x4E2D;&#x5341;&#x5206;&#x6709;&#x6548;&#x3002;&#x8FD9;&#x79CD;&#x98CE;&#x683C;&#x7684;&#x4EE3;&#x7801;&#x53EF;&#x4EE5;&#x907F;&#x514D;&#x590D;&#x6742;&#x7684;&#x6869;&#x6570;&#x636E;&#xFF0C;&#x7528;&#x6765;&#x590D;&#x73B0;&#x5B83;&#x4EEC;&#x4EE3;&#x8868;&#x7684;&#x7EC4;&#x4EF6;&#x884C;&#x4E3A;&#x3002;&#x800C;&#x662F;&#x76F4;&#x63A5;&#x6CE8;&#x5165;&#x6570;&#x503C;&#x3002;</p>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> filterTestFn = jest.fn()
+
+filterTestFn.mockReturnValueOnce(<span class="hljs-literal">true</span>).mockReturnValueOnce(<span class="hljs-literal">false</span>)
+
+<span class="hljs-keyword">const</span> result = [<span class="hljs-number">11</span>, <span class="hljs-number">12</span>].filter(filterTestFn)
+
+<span class="hljs-built_in">console</span>.log(result) <span class="hljs-comment">// =&gt; 11</span>
+<span class="hljs-built_in">console</span>.log(filterTestFn.mock.calls) <span class="hljs-comment">// =&gt; [[11], [12]]</span>
+</code></pre>
+<h2 id="&#x6A21;&#x62DF;&#x5B9E;&#x73B0;">&#x6A21;&#x62DF;&#x5B9E;&#x73B0;</h2>
+<p>&#x6709;&#x4E9B;&#x573A;&#x666F;&#x9700;&#x8981;&#x7684;&#x66F4;&#x591A;&#xFF0C;&#x4E0D;&#x4EC5;&#x4EC5;&#x662F;&#x8FD4;&#x56DE;&#x503C;&#xFF0C;&#x800C;&#x4E14;&#x9700;&#x8981;&#x6A21;&#x62DF;&#x5B8C;&#x6574;&#x7684;&#x51FD;&#x6570;&#x5B9E;&#x73B0;&#x3002;&#x8FD9;&#x53EF;&#x4EE5;&#x901A;&#x8FC7; mock &#x51FD;&#x6570;&#x7684; <code>jest.fn</code> &#x6216; <code>mockImplementationOnce</code> &#x5B9E;&#x73B0;&#x3002;</p>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> myMockFn = jest.fn(cb =&gt; cb(<span class="hljs-literal">null</span>, <span class="hljs-literal">true</span>))
+
+myMockFn((err, val) =&gt; <span class="hljs-built_in">console</span>.log(val))
+
+myMockFn((err, val) =&gt; <span class="hljs-built_in">console</span>.log(val))
+</code></pre>
+<p>TO BE CONTINUE...</p>
+<h2 id="ref">REF</h2>
+<ul>
+<li><a href="https://facebook.github.io/jest/docs/en/mock-functions.html" target="_blank">Mock Functions - Jest</a></li>
+<li><a href="https://www.quora.com/What-is-continuation-passing-style-in-functional-programming#" target="_blank">What is continuation-passing style in functional programming? - quora</a></li>
+</ul>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="setup-teardown.html" class="navigation navigation-prev " aria-label="Previous page: 准备和扫尾">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="expect.html" class="navigation navigation-next " aria-label="Next page: Expect">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"模拟数据","level":"1.6","depth":1,"next":{"title":"Expect","level":"4.1","depth":1,"path":"expect.md","ref":"./expect.md","articles":[]},"previous":{"title":"准备和扫尾","level":"1.5","depth":1,"path":"setup-teardown.md","ref":"./setup-teardown.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"root":"./src","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"gitbook":"*"},"file":{"path":"mock-functions.md","mtime":"2018-01-21T14:27:00.876Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-01-21T14:27:32.530Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
