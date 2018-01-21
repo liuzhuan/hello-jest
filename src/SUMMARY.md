@@ -4,6 +4,7 @@
 - [使用匹配器](./using-matchers.md)
 - [测试异步代码](./asynchronous.md)
 - [准备和扫尾](./setup-teardown.md)
+- [模拟数据](./mock-functions.md)
 
 ## 指南
 
